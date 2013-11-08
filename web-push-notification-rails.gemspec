@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "web-push-notification-rails"
-  s.version = "0.2.0"
+  s.version = "0.2.1"
   s.authors = ["Ankur Patel"]
   s.date = %q[2013-11-07]
   s.description = "Apple Web Push Notifications Package Generator"
