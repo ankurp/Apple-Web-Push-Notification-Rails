@@ -1,0 +1,8 @@
+{
+    "websiteName": "<%= website_name %>",
+    "websitePushID": "<%= website_push_id %>",
+    "allowedDomains": ["<%= website_allowed_domain %>"],
+    "urlFormatString": "<%= website_url_formatted_string %>",
+    "authenticationToken": "",
+    "webServiceURL": "<%= website_service_url %>"
+}
