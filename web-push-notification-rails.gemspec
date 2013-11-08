@@ -7,7 +7,8 @@ Gem::Specification.new do |s|
   s.summary = s.description
   s.email = 'ankur.patel@ymail.com'
   s.files = Dir.glob('{lib}/**/*')
-  s.homepage = ''
+  s.homepage = 'https://github.com/ankurp/apple-web-push-notification-rails'
+  s.licenses = 'MIT'
   s.has_rdoc = false
   s.required_ruby_version = '>=2.0.0'
   s.rubyforge_project = 'web-push-notification-rails'
