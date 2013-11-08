@@ -28,7 +28,7 @@ Alternatively, you can follow all of my steps:
 * The password you enter during the saving process will go into the initializer ("Run Generator" step)
 
 ### WWDR Certificate
-Second certificate you need to sign a pkpass
+Second certificate you need to sign the web package
 
 1. <b>Download</b> http://developer.apple.com/certificationauthority/AppleWWDRCA.cer
 * Double-click to <b>install</b>
