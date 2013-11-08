@@ -45,8 +45,17 @@ Example:
 ```
    rails g web_notification:notification_package mixtapp https://www.mixtapp.co web.com.encoredevlabs.mixtapp https://www.mixtapp.co "https://www.mixtapp.co?%@" cert/AppleWWDRCA.cer cert/website_aps_production.cer.p12 password
 ```
-
 If password is blank do not enter the last parameter: cert_password and a blank password will be used.
+
+### Customize
+If you need to change the password or location of the certificates later you can change it in the web_notification_package_initializer.rb file.
+
+The package sent to Apple is inside `notfication/web_package` folder in Rails.root. Customize the icons inside icon.iconset folder. You can also customize the `website.json` which was genereated using the values specified in the generator. Checkout the Apple documentation link below to see what values you need to set in the json file.
+
+### Apple Callback to Controller
+All request from Apple regarding the web package will be sent to `apple_web_notifications_controller.rb` which you can customize or you can change the generated routes in the routes.rb file and send the Apple callback methods to your desired controller.
+
+You will need to implement what needs to be done once you get the device token from Apple.
 
 If you have any questions or need help, find me on Twitter: @ankurpatel
 
