@@ -6,6 +6,8 @@ Apple Safari Web Push Notification Gem for Rails
 ## Overview
 Checkout the [Apple WWDC Session Video] before if you want an overview on how the Safari push notifications work.
 
+<img src="http://www.xn--bdk.co/images/WebNotifications.png"/>
+
 ## Usage
 
 ### Install
