@@ -39,7 +39,7 @@ Second certificate you need to sign the web package
 * Change "File Format" to "Privacy Enhanced Mail (.pem)" and <b>save</b> it (preferably to Rails.root/cert/)
 
 ### Run generators
-All the <b>parameters are optional</b>. You can just edit the initializer later
+Last <b>password parameter is optional</b>. You can just edit the initializer later
 ```
    rails g web_notification:notification_package website_name website_service_url website_push_id website_allowed_domain website_url_formatted_string wwdr_certificate_path key_path [cert_password]
 ```
@@ -60,9 +60,15 @@ All request from Apple regarding the web package will be sent to `apple_web_noti
 
 You will need to implement what needs to be done once you get the device token from Apple.
 
-If you have any questions or need help, find me on Twitter: @ankurpatel
+### Issues/Features
+# Template view for triggering the push notification request on the website or sample code on how to request push notification.
+# Ability to send Push Notification from the rails server as currently I am testing by sending notification using the [Houston] like this ` apn push "64BE8308E51B6B91C0D41A8C856274977A6A45650049435C02F5E9944AB9D7F7" -c cert/apple_push_notification.pem -e production -P "{\"aps\":{\"alert\":{\"title\":\"Title test\",\"body\":\"Body test\"},\"url-args\":[\"someparams\"]}}"`
+
+If you have any questions or need help, find me on Twitter: [@ankurpatel]
 
 [Apple Web Push Notifications]: https://developer.apple.com/notifications/safari-push-notifications/
 [iOS Provisioning Portal]: https://developer.apple.com/devcenter/ios/index.action
 [Apple WWDC Session Video]: https://developer.apple.com/wwdc/videos/index.php?id=614
 [Apple documentation]: https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html
+[@ankurpatel]: https://www.twitter.com/ankurpatel
+[Houston]: https://github.com/nomad/houston
