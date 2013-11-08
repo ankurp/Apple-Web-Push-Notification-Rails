@@ -1,0 +1,35 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script type="text/javascript">
+var token = "";
+var id = "1"; // Replace this with a user id or unique id of the client
+window.onload = function() {
+  if(window.navigator.userAgent.indexOf('7.0 Safari') > -1) {
+    checkPerms();
+  } else {
+    alert("Browser not supported for web push notification subscription");
+  }
+};
+
+function checkPerms() {        
+  var result = window.safari.pushNotification.permission("<%= website_push_id %>");
+  if(result.permission === 'default') {
+    alert("Requesting Permission");
+    requestPermissions();
+  } else if(result.permission === 'granted') {
+    token = result.deviceToken;        
+  } else if(result.permission === 'denied') {
+    alert("Permission Denied");
+  }
+}
+
+function requestPermissions() {
+  window.safari.pushNotification.requestPermission("<%= website_service_url %>", "<%= website_push_id %>", {"id": id}, function(c) {
+    if(c.permission === 'granted') {
+      token = result.deviceToken;
+      alert("Token received for your device and sent to your server: " + token);
+    } else if(c.permission === 'denied') {
+      alert("Permission denied by Apple. Please check the log of your server for error.");
+    }
+  });
+}
+</script>

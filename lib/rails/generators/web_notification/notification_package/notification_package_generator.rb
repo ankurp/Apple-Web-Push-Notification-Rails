@@ -15,10 +15,12 @@ module WebNotification
       def create_initializer_file
         template 'web_notification_package_initializer.rb', File.join('config', 'initializers', "web_notification_package_initializer.rb")
         template 'apple_web_notifications_controller.rb', File.join('app', 'controllers', "apple_web_notifications_controller.rb")
+        template 'index.html.erb', File.join('app', 'views', 'apple_web_notifications', 'index.html.erb')
         route "delete '/v1/devices/:device_token/registrations/:web_push_id', :controller => :apple_web_notifications, :action => :add_device, :constraints => { :web_push_id => /[^\/]+/ }"
         route "post '/v1/devices/:device_token/registrations/:web_push_id', :controller => :apple_web_notifications, :action => :delete_device, :constraints => { :web_push_id => /[^\/]+/ }"
         route "post '/v1/pushPackages/:web_push_id', :controller => :apple_web_notifications, :action => :package, :constraints => { :web_push_id => /[^\/]+/ }"
         route "post '/v1/log', :controller => :apple_web_notifications, :action => :log"
+        route "get '/apple_web_notifications', :controller => :apple_web_notifications, :action => :index"
         template 'website.json', File.join('notification', 'web_package', "website.json")
         directory 'icon.iconset', File.join('notification', 'web_package', 'icon.iconset')
       end

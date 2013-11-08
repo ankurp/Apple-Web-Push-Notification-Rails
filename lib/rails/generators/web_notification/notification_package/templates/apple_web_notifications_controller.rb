@@ -1,4 +1,7 @@
 class AppleWebNotificationsController < ApplicationController
+
+  def index
+  end
   
   def add_device
     puts params
