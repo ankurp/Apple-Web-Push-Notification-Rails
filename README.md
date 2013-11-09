@@ -19,7 +19,7 @@ bundle install
 
 ### P12 certificate
 This the first of 2 certificates you need to sign.
-[Apple has a step-by-step] for most of it. You can pick up from step 7.
+Apple has a step-by-step for most of it. You can pick up from step 7.
 Alternatively, you can follow all of my steps:
 
 1. Go to <b>[iOS Provisioning Portal]</b> (you need to login or register)
@@ -62,9 +62,11 @@ All request from Apple regarding the web package will be sent to `apple_web_noti
 
 You will need to implement what needs to be done once you get the device token from Apple.
 
-### Issues/Features
-Template view for triggering the push notification request on the website or sample code on how to request push notification.
-Ability to send Push Notification from the rails server as currently I am testing by sending notification using the [Houston] like this `apn push "64BE8308E51B6B91C0D41A8C856274977A6A45650049435C02F5E9944AB9D7F7" -c cert/apple_push_notification.pem -e production -P "{\"aps\":{\"alert\":{\"title\":\"Title test\",\"body\":\"Body test\"},\"url-args\":[\"someparams\"]}}"`
+### Features to be implemented
+Ability to send Push Notification from the rails server as currently I am testing by sending notification using the [Houston] like this 
+```
+  apn push "64BE8308E51B6B91C0D41A8C856274977A6A45650049435C02F5E9944AB9D7F7" -c cert/apple_push_notification.pem -e production -P "{\"aps\":{\"alert\":{\"title\":\"Title test\",\"body\":\"Body test\"},\"url-args\":[\"someparams\"]}}"
+```
 
 If you have any questions or need help, find me on Twitter: [@ankurpatel]
 
