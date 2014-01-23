@@ -76,3 +76,6 @@ If you have any questions or need help, find me on Twitter: [@ankurpatel]
 [Apple documentation]: https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html
 [@ankurpatel]: https://www.twitter.com/ankurpatel
 [Houston]: https://github.com/nomad/houston
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ankurp/apple-web-push-notification-rails/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
