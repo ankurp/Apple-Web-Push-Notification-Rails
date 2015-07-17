@@ -53,7 +53,7 @@ Example:
 If password is blank do not enter the last parameter: cert_password and a blank password will be used.
 
 ### Customize
-If you need to change the password or location of the certificates later you can change it in the web_notification_package_initializer.rb file.
+If you need to change the password or location of the certificates later you can change it in the `web_notification_package_initializer.rb` file.
 
 The package sent to Apple is inside `notfication/web_package` folder in Rails.root. Customize the icons inside icon.iconset folder. You can also customize the `website.json` which was genereated using the values specified in the generator. Checkout the [Apple documentation] link to see what values you need to set in the json file.
 
