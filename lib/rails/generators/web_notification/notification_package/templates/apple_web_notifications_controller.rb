@@ -11,7 +11,7 @@ class AppleWebNotificationsController < ApplicationController
 
   def delete_device
     puts params
-    # add your code to add device
+    # add your code to delete device
     render json: {}
   end
 
